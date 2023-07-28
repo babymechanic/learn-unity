@@ -6,12 +6,19 @@ public class DustTrail : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        dustTrailEffect.Play();
+        if (other.gameObject.CompareTag("Ground"))
+        {
+            dustTrailEffect.Play();
+        }
     }
 
     private void OnCollisionExit2D(Collision2D other)
     {
-        Invoke(nameof(StopTrailEffect), 1.0f);
+
+        if (other.gameObject.CompareTag("Ground"))
+        {
+            StopTrailEffect();
+        }
     }
 
     private void StopTrailEffect()

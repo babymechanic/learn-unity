@@ -4,10 +4,10 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float torqueAmount = 1.0f;
-    private Rigidbody2D rb2d;
-    private SurfaceEffector2D surfaceEffector2D;
     [SerializeField] private float boostSpeed = 20.0f;
     [SerializeField] private float normalSpeed = 20.0f;
+    private Rigidbody2D rb2d;
+    private SurfaceEffector2D surfaceEffector2D;
 
     // Start is called before the first frame update
     void Start()
