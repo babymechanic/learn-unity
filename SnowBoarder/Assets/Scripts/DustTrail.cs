@@ -14,7 +14,6 @@ public class DustTrail : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D other)
     {
-
         if (other.gameObject.CompareTag("Ground"))
         {
             StopTrailEffect();
